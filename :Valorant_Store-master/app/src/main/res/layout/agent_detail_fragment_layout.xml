@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/dark_sea2"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:background="@drawable/bottom_corner"
+            android:layout_width="match_parent"
+            android:layout_height="300dp">
+
+            <ImageView
+                android:id="@+id/characterImage"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="fitCenter"
+                android:contentDescription="@string/agent_image" />
+
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="220dp"
+                android:gravity="start"
+                android:paddingStart="20dp"
+                android:text="@string/role"
+                android:textColor="@color/black"
+                android:textSize="23sp"
+                android:textStyle="bold"
+                tools:ignore="RtlSymmetry" />
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/roleIcon"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_alignLeft="@id/role"
+                android:layout_margin="15dp"
+                android:background="@color/black"
+                android:scaleType="fitXY"
+                app:shapeAppearanceOverlay="@style/CircularImageViewStyle" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/role"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="263dp"
+                android:gravity="start"
+                android:paddingStart="20dp"
+                android:text="@string/empty"
+                android:textSize="19sp"
+                android:textStyle="bold"
+                tools:ignore="RtlSymmetry" />
+
+        </RelativeLayout>
+
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_margin="10dp"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="10dp"
+            app:cardBackgroundColor="@color/dark_sea"
+            android:elevation="10dp"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:layout_marginBottom="5dp"
+                android:padding="1dp"
+                android:layout_height="wrap_content">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="15dp"
+                    android:text="@string/description"
+                    android:textColor="@color/white"
+                    android:textSize="21sp"
+                    android:textStyle="bold" />
+
+                <com.ms.square.android.expandabletextview.ExpandableTextView xmlns:expandableTextView="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/expand_text_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    expandableTextView:animDuration="200"
+                    expandableTextView:maxCollapsedLines="4">
+
+                    <TextView
+                        android:id="@id/expandable_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:textColor="@color/light_grey"
+                        android:textSize="16sp" />
+
+                    <ImageButton
+                        android:id="@id/expand_collapse"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end|bottom"
+                        android:padding="16dp" />
+
+                </com.ms.square.android.expandabletextview.ExpandableTextView>
+
+            </LinearLayout>
+
+
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_margin="10dp"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="10dp"
+            app:cardBackgroundColor="@color/dark_sea"
+            android:elevation="10dp"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="15dp"
+                    android:text="@string/abilities"
+                    android:textColor="@color/white"
+                    android:textSize="21sp"
+                    android:textStyle="bold" />
+
+
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/abilityRecycler"
+                    android:layout_width="match_parent"
+                    android:layout_height="700dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="5dp"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+    </LinearLayout>
+</ScrollView>

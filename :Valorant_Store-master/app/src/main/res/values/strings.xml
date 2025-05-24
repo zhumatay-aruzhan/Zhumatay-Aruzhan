@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">Valorant Store</string>
+    <string name="weapon_image" translatable="false">Silah Resmi</string>
+    <string name="empty">Boş</string>
+    <string name="price">Fiyat</string>
+    <string name="loading_screen">Yükleme Ekranı</string>
+    <string name="loading_text">Yükleniyor...</string>
+    <string name="there_isn_internet_connection">Internet Bağlantınız Yok</string>
+    <string name="try_connect">Tekrar Bağlan</string>
+    <string name="role"><u>Rolü</u></string>
+    <string name="description">Açıklaması:</string>
+    <string name="agents">Ajanlar</string>
+    <string name="weapons">Silahlar</string>
+    <string name="abilities">Yetenekler:</string>
+    <string name="agent_image">Agent Image</string>
+    <string name="weapon_informations">Silah Özellikleri:</string>
+    <string name="fire_rate">Azami Atış Hızı:</string>
+    <string name="runSpeedMultiplier">Atış Hızı Çarpanı:</string>
+    <string name="magSize">Cephane Sayısı:</string>
+    <string name="equipTimeSec">Kuşanma Süresi:</string>
+    <string name="firstBulletAccuracy">İlk Mermi Hassasiyeti:</string>
+    <string name="chromas">Chromalar:</string>
+    <string name="chroma_image">Chroma Resmi</string>
+</resources>
